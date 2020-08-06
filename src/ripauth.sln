@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "riplegal.datos", "riplegal.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "riplegal.entidades", "riplegal.entidades\riplegal.entidades.csproj", "{B1C6C182-48D9-4056-A7EF-9BEA4156AF78}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "riplegal.web", "riplegal.web\riplegal.web.csproj", "{64EB6774-6327-4FB6-98C6-8BFC29AB6D30}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "riplegal.api", "riplegal.web\riplegal.api.csproj", "{64EB6774-6327-4FB6-98C6-8BFC29AB6D30}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
