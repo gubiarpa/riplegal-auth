@@ -8,6 +8,7 @@ namespace riplegal.datos
     {
         public DbSet<Usuario> Usuarios { get; set; }
         public DbSet<Perfil> Perfiles { get; set; }
+        public DbSet<Modulo> Modulos { get; set; }
 
         public DBContextApi(DbContextOptions<DBContextApi> options) : base(options)
         {
@@ -18,6 +19,7 @@ namespace riplegal.datos
             base.OnModelCreating(modelBuilder);
             modelBuilder.ApplyConfiguration(new UsuarioMap());
             modelBuilder.ApplyConfiguration(new PerfilMap());
+            modelBuilder.ApplyConfiguration(new ModuloMap());
         }
     }
 }

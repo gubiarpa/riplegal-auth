@@ -8,7 +8,7 @@ namespace riplegal.datos.Mapping
     {
         public void Configure(EntityTypeBuilder<Perfil> builder)
         {
-            builder.ToTable("TB_Perfil").HasKey(x => x.Id);
+            builder.ToTable("TB_Perfil").HasKey(p => p.Id);
         }
     }
 }
