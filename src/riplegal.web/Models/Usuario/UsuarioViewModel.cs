@@ -6,7 +6,7 @@ namespace riplegal.api.Models.Usuario
     public class UsuarioViewModel
     {
         [Required]
-        public Guid IDUser { get; set; }
+        public Guid IdUser { get; set; }
         [Required]
         public string User { get; set; }
         [Required]

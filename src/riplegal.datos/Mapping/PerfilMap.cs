@@ -4,11 +4,11 @@ using riplegal.entidades.Models;
 
 namespace riplegal.datos.Mapping
 {
-    public class UsuarioMap : IEntityTypeConfiguration<Usuario>
+    public class PerfilMap : IEntityTypeConfiguration<Perfil>
     {
-        public void Configure(EntityTypeBuilder<Usuario> builder)
+        public void Configure(EntityTypeBuilder<Perfil> builder)
         {
-            builder.ToTable("TB_Usuario").HasKey(x => x.Id);
+            builder.ToTable("TB_Perfil").HasKey(x => x.Id);
         }
     }
 }

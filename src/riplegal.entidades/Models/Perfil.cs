@@ -5,15 +5,12 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace riplegal.entidades.Models
 {
-    public class Usuario : IGuid
+    public class Perfil : IGuid
     {
-        [Column("IDUser")]
+        [Column("IDPerfil")]
         public Guid Id { get; set; }
         [Required]
-        [Column("Usuario")]
+        [Column("Descripcion")]
         public string Nombre { get; set; }
-        [Required]
-        public string Password { get; set; }
-        public string Nick { get; set; }
     }
 }

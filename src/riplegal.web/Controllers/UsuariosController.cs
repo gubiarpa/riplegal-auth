@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using riplegal.api.Controllers.Behavior;
 using riplegal.api.Models.Usuario;
 using riplegal.datos;
 using System.Linq;
@@ -9,13 +10,10 @@ namespace riplegal.api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class UsuariosController : ControllerBase
+    public class UsuariosController : ApiControllerBase, IMethodListar
     {
-        private readonly DBContextApi _context;
-
-        public UsuariosController(DBContextApi context)
+        public UsuariosController(DBContextApi context) : base(context)
         {
-            _context = context;
         }
 
         [HttpGet("[action]")]
@@ -25,12 +23,12 @@ namespace riplegal.api.Controllers
 
             if ((usuarios == null) || (usuarios.Count == 0)) return NotFound();
 
-            var usuariosResponse = usuarios.Select(c => new UsuarioViewModel()
+            var usuariosResponse = usuarios.Select(u => new UsuarioViewModel()
             {
-                IDUser = c.IDUser,
-                User = c.Nombre,
-                Password = c.Password,
-                Nickname = c.Nick
+                IdUser = u.Id,
+                User = u.Nombre,
+                Password = u.Password,
+                Nickname = u.Nick
             });
 
             return Ok(usuariosResponse);
