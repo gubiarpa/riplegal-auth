@@ -2,6 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UserSecretsId>15a07d61-99fb-4f7a-9be2-4761fd54cf9a</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
@@ -18,6 +19,8 @@
     <ProjectReference Include="..\riplegal.datos\riplegal.datos.csproj" />
     <ProjectReference Include="..\riplegal.entidades\riplegal.entidades.csproj" />
   </ItemGroup>
+
+  <ProjectExtensions><VisualStudio><UserProperties appsettings_1json__JsonSchema="" /></VisualStudio></ProjectExtensions>
 
 
 </Project>
