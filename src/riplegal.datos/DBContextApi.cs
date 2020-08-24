@@ -11,6 +11,7 @@ namespace riplegal.datos
         public DbSet<Modulo> Modulos { get; set; }
         public DbSet<Submodulo> Submodulos { get; set; }
         public DbSet<Sistema> Sistemas { get; set; }
+        public DbSet<UsuarioToken> UsuarioTokens { get; set; }
 
         public DBContextApi(DbContextOptions<DBContextApi> options) : base(options)
         {
@@ -24,6 +25,7 @@ namespace riplegal.datos
             modelBuilder.ApplyConfiguration(new ModuloMap());
             modelBuilder.ApplyConfiguration(new SubmoduloMap());
             modelBuilder.ApplyConfiguration(new SistemaMap());
+            modelBuilder.ApplyConfiguration(new UsuarioTokenMap());
         }
     }
 }
