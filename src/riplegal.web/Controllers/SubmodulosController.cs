@@ -13,27 +13,10 @@ namespace riplegal.api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class SubmodulosController : ApiControllerBase, IMethodListar
+    public class SubmodulosController : ApiControllerBase
     {
         public SubmodulosController(DBContextApi context) : base(context)
         {
-        }
-
-        [HttpGet("[action]")]
-        public async Task<IActionResult> Listar()
-        {
-            var submodulos = await _context.Submodulos.ToListAsync();
-
-            if ((submodulos == null) || (submodulos.Count == 0)) return NotFound();
-
-            var submodulosResponse = submodulos.Select(s => new SubmoduloViewModel()
-            {
-                Id = s.Id,
-                Nombre = s.Nombre,
-                IdModulo = s.IdModulo
-            });
-
-            return Ok(submodulosResponse);
         }
     }
 }
