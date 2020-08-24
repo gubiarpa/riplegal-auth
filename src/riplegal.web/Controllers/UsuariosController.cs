@@ -16,28 +16,10 @@ namespace riplegal.api.Controllers
         {
         }
 
-        //[HttpGet("action")]
-        //public async Task<IActionResult> Autenticar()
-        //{
-        //    return Ok(new { c = 9 });
-        //}
-
-        [HttpGet("[action]")]
-        public async Task<IActionResult> Listar()
+        [HttpPost("[action]")]
+        public async Task<IActionResult> Autenticar()
         {
-            var usuarios = await _context.Usuarios.ToListAsync();
-
-            if ((usuarios == null) || (usuarios.Count == 0)) return NotFound();
-
-            var usuariosResponse = usuarios.Select(u => new UsuarioViewModel()
-            {
-                IdUser = u.Id,
-                User = u.Nombre,
-                Password = u.Password,
-                Nickname = u.Nick
-            });
-
-            return Ok(usuariosResponse);
+            return Ok(new { c = 9 });
         }
     }
 }

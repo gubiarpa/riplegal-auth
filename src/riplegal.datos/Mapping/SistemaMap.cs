@@ -11,7 +11,7 @@ namespace riplegal.datos.Mapping
     {
         public void Configure(EntityTypeBuilder<Sistema> builder)
         {
-            builder.ToTable("TB_Modulo").HasKey(m => m.Id);
+            builder.ToTable("TB_Sistema").HasKey(m => m.Id);
         }
     }
 }

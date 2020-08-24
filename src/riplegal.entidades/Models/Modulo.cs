@@ -12,5 +12,8 @@ namespace riplegal.entidades.Models
         [Required]
         [Column("Descripcion")]
         public string Nombre { get; set; }
+        [Required]
+        [Column("IDSistema")]
+        public Guid IdSistema { get; set; }
     }
 }
